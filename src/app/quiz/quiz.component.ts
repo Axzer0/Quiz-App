@@ -36,18 +36,11 @@ export class QuizComponent implements OnInit {
 
 
   setInt(){
+    document.getElementById("a").style.visibility = 'visible';
+    document.getElementById("start").style.visibility = 'hidden';
+    this.startTimer();
     this.int = setInterval(() => {
-
-      if (document.getElementById("a").style.visibility != 'visible' &&
-        document.getElementById("b").style.visibility != 'visible' &&
-        document.getElementById("c").style.visibility != 'visible' &&
-        document.getElementById("d").style.visibility != 'visible') {
-        document.getElementById("a").style.visibility = 'visible';
-        document.getElementById("b").style.visibility = 'hidden';
-        document.getElementById("start").style.visibility = 'hidden';
-        this.timeLeft=10;
-        this.startTimer();
-      } else if (document.getElementById("a").style.visibility == 'visible') {
+      if (document.getElementById("a").style.visibility == 'visible') {
         document.getElementById("b").style.visibility = 'visible';
         document.getElementById("a").style.visibility = 'hidden';
         this.pauseTimer();this.timeLeft=10;this.startTimer();
@@ -69,7 +62,7 @@ export class QuizComponent implements OnInit {
         clearInterval(this.int);
       }
 
-    },10000)
+    },3000)
   }
 
   onClick(val) {
@@ -99,7 +92,7 @@ export class QuizComponent implements OnInit {
       if (this.timeLeft > 0) {
         this.timeLeft--;
       } else {
-        this.timeLeft = 60;
+        this.timeLeft = 10;
       }
     }, 1000)
   }
@@ -107,4 +100,13 @@ export class QuizComponent implements OnInit {
   pauseTimer() {
     clearInterval(this.interval);
   }
+
+  res(){
+    document.getElementById("end").style.visibility = 'hidden';
+    document.getElementById("start").style.visibility = 'visible';
+    this.pauseTimer()
+    this.timeLeft=10;
+
+  }
+
 }

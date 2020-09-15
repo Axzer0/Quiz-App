@@ -5,7 +5,9 @@
   <div class="row">
     <div class="col-lg-offset-3">
       <div class="inner" id="start"><div class="col-lg-offset-4"><button mat-button (click)="setInt()" style="background-color: yellow" id="str">Start</button></div></div>
-      <div class="inner" id="end">End</div>
+      <div class="inner" id="end">
+        <button mat-button (click)="res()" style="background-color: yellow" id="reBtn">Restart</button>
+      </div>
     <div *ngFor="let card of Cards" [id]="card.id" class="inner">
       <div><h3>{{card.ques}}</h3></div>
       <hr>
