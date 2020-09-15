@@ -1,0 +1,41 @@
+
+#a,#b,#c,#d
+{
+  visibility: hidden;
+  background-color: yellow;
+}
+#end{
+  visibility: hidden;
+  background-color: yellow;
+  text-align: center;
+  font-family: "Comic Sans MS";
+  font-size: 16px;
+}
+#start{
+  background-color: yellow;
+}
+div.inner{
+  position: absolute;
+  padding: 20px;
+  height: 250px;
+  width: 500px;
+}
+.nxtpos{
+  position: relative;
+  top: 300px;
+  border-bottom: 1px solid black ;
+  width: 550px;
+}
+
+.bt{
+   width: 100px;
+  margin-bottom: 20px;
+}
+
+#bg{
+  background-color: yellow;
+}
+#str{
+  top: 80px;
+  font-size: 27px;
+}

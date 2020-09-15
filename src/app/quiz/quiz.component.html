@@ -1,0 +1,30 @@
+<div class="container-fluid"
+     fxLayout="column"
+     fxLayoutGap="10px">
+
+  <div class="row">
+    <div class="col-lg-offset-3">
+      <div class="inner" id="start"><div class="col-lg-offset-4"><button mat-button (click)="setInt()" style="background-color: yellow" id="str">Start</button></div></div>
+      <div class="inner" id="end">End</div>
+    <div *ngFor="let card of Cards" [id]="card.id" class="inner">
+      <div><h3>{{card.ques}}</h3></div>
+      <hr>
+      <div class="row">
+      <div class="col-xs-1 col-md-offset-1"><button mat-button (click)="onClick('a')" class="bt" >{{card.a}}</button></div>
+      <div class="col-xs-1  col-md-offset-3"><button mat-button (click)="onClick('b')" class="bt">{{card.b}}</button></div>
+        <div class="col-xs-1  col-md-offset-3">Time Remaining</div>
+      </div>
+      <div class="row">
+        <div class="col-xs-1 col-md-offset-1"><button mat-button (click)="onClick('c')" class="bt" >{{card.c}}</button></div>
+        <div class="col-xs-1  col-md-offset-3"><button mat-button (click)="onClick('d')" class="bt">{{card.d}}</button></div>
+        <div class="col-xs-1  col-md-offset-3">{{timeLeft}}</div>
+      </div>
+    </div>
+    <div class="nxtpos">
+      <span ><h3>{{p}}</h3></span>
+    </div>
+    </div>
+  </div>
+</div>
+
+
